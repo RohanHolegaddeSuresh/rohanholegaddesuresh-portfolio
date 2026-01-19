@@ -121,14 +121,14 @@ const HeroSection = () => {
               {/* Floating badges */}
             <motion.div initial={{
               opacity: 0,
-              x: 20
+              x: -20
             }} animate={{
               opacity: 1,
               x: 0
             }} transition={{
               duration: 0.6,
               delay: 1
-            }} className="absolute -bottom-4 left-1/3 -translate-x-1/2 bg-card border border-border rounded-lg py-2 shadow-xl px-[8px]">
+            }} className="absolute -bottom-4 -left-4 bg-card border border-border rounded-lg py-2 shadow-xl px-[8px]">
                 <p className="text-[10px] text-muted-foreground mb-0.5">Masters</p>
                 <p className="text-xs font-semibold">AUT, Auckland</p>
               </motion.div>
