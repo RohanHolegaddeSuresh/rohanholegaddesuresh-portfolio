@@ -36,9 +36,8 @@ const HeroSection = () => {
           }} transition={{
             duration: 0.8,
             delay: 0.3
-          }} className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold leading-[0.9] mb-6">
-              Rohan
-              <br />
+          }} className="text-5xl md:text-6xl xl:text-8xl font-display font-bold leading-[0.9] mb-6 lg:text-5xl">Rohan Holegadde
+Holegadde,<br />
               <span className="text-gradient">Holegadde</span>
               <br />
               Suresh<span className="text-primary">,</span>
