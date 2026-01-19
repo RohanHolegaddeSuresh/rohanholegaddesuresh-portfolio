@@ -133,19 +133,7 @@ const HeroSection = () => {
                 <p className="text-xs font-semibold">AUT, Auckland</p>
               </motion.div>
 
-              <motion.div initial={{
-              opacity: 0,
-              x: -20
-            }} animate={{
-              opacity: 1,
-              x: 0
-            }} transition={{
-              duration: 0.6,
-              delay: 1.2
-            }} className="absolute -left-3 bottom-1/4 bg-card border border-border rounded-lg px-3 py-2 shadow-xl">
-                <p className="text-[10px] text-muted-foreground mb-0.5">Focus</p>
-                <p className="text-xs font-semibold text-primary">AI & ML</p>
-              </motion.div>
+              
             </div>
           </motion.div>
         </div>
