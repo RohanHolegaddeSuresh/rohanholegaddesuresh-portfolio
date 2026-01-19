@@ -85,19 +85,19 @@ const HeroSection = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="order-1 lg:order-2 relative"
+            className="order-1 lg:order-2 flex justify-center lg:justify-end"
           >
-            <div className="relative">
+            <div className="relative w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64">
               {/* Decorative background */}
-              <div className="absolute inset-0 bg-primary/20 rounded-3xl transform rotate-3 scale-105" />
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-transparent rounded-3xl transform -rotate-3 scale-102" />
+              <div className="absolute inset-0 bg-primary/20 rounded-2xl transform rotate-3 scale-110" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-transparent rounded-2xl transform -rotate-3 scale-105" />
               
               {/* Main image */}
-              <div className="relative rounded-3xl overflow-hidden">
+              <div className="relative w-full h-full rounded-2xl overflow-hidden">
                 <img
                   src={profilePhoto}
                   alt="Rohan Holegadde Suresh - Software Engineer"
-                  className="w-full h-auto object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
               </div>
@@ -107,20 +107,20 @@ const HeroSection = () => {
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 1 }}
-                className="absolute -right-4 top-1/4 bg-card border border-border rounded-lg p-4 shadow-xl"
+                className="absolute -right-3 top-1/4 bg-card border border-border rounded-lg px-3 py-2 shadow-xl"
               >
-                <p className="text-xs text-muted-foreground mb-1">Masters</p>
-                <p className="text-sm font-semibold">AUT, Auckland</p>
+                <p className="text-[10px] text-muted-foreground mb-0.5">Masters</p>
+                <p className="text-xs font-semibold">AUT, Auckland</p>
               </motion.div>
 
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 1.2 }}
-                className="absolute -left-4 bottom-1/4 bg-card border border-border rounded-lg p-4 shadow-xl"
+                className="absolute -left-3 bottom-1/4 bg-card border border-border rounded-lg px-3 py-2 shadow-xl"
               >
-                <p className="text-xs text-muted-foreground mb-1">Focus</p>
-                <p className="text-sm font-semibold text-primary">AI & ML</p>
+                <p className="text-[10px] text-muted-foreground mb-0.5">Focus</p>
+                <p className="text-xs font-semibold text-primary">AI & ML</p>
               </motion.div>
             </div>
           </motion.div>
