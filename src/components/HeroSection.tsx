@@ -128,7 +128,7 @@ const HeroSection = () => {
             }} transition={{
               duration: 0.6,
               delay: 1
-            }} className="absolute -right-3 top-1/4 bg-card border border-border rounded-lg py-2 shadow-xl px-[8px]">
+            }} className="absolute -right-3 top-1/3 bg-card border border-border rounded-lg py-2 shadow-xl px-[8px]">
                 <p className="text-[10px] text-muted-foreground mb-0.5">Masters</p>
                 <p className="text-xs font-semibold">AUT, Auckland</p>
               </motion.div>
