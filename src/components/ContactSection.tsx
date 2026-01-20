@@ -1,11 +1,12 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Mail, Phone, Linkedin, MapPin, Send, ArrowUpRight } from 'lucide-react';
+import { Mail, Phone, Linkedin, MapPin, Send, ArrowUpRight, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from '@emailjs/browser';
 
 const contactInfo = [
   {
@@ -36,21 +37,42 @@ const contactInfo = [
 
 const ContactSection = () => {
   const ref = useRef(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: 'Message Sent!',
-      description: 'Thank you for reaching out. I\'ll get back to you soon.',
-    });
-    setFormData({ name: '', email: '', message: '' });
+    if (!formRef.current) return;
+
+    setIsLoading(true);
+    try {
+      await emailjs.sendForm(
+        'service_dyab0ej',
+        'template_dsef4v4',
+        formRef.current,
+        'BGiqkWnPphCoD2JGF'
+      );
+      toast({
+        title: 'Message Sent!',
+        description: 'Thank you for reaching out. I\'ll get back to you soon.',
+      });
+      setFormData({ name: '', email: '', message: '' });
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: 'Failed to send message. Please try again.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -147,13 +169,14 @@ const ContactSection = () => {
           >
             <h3 className="text-2xl font-display font-semibold mb-8">Send a Message</h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Your Name
                 </label>
                 <Input
                   id="name"
+                  name="name"
                   type="text"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -169,6 +192,7 @@ const ContactSection = () => {
                 </label>
                 <Input
                   id="email"
+                  name="email"
                   type="email"
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -184,6 +208,7 @@ const ContactSection = () => {
                 </label>
                 <Textarea
                   id="message"
+                  name="message"
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Tell me about your project or opportunity..."
@@ -193,9 +218,18 @@ const ContactSection = () => {
                 />
               </div>
               
-              <Button type="submit" size="lg" className="w-full group">
-                Send Message
-                <Send className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+              <Button type="submit" size="lg" className="w-full group" disabled={isLoading}>
+                {isLoading ? (
+                  <>
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    Send Message
+                    <Send className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </>
+                )}
               </Button>
             </form>
           </motion.div>
