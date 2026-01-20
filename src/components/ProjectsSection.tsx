@@ -99,7 +99,9 @@ const ProjectsSection = () => {
                 
                 {achievement.isPublication && (
                   <a
-                    href="#"
+                    href="https://troindia.in/journal/ijcesr/vol8iss7/113-118.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-1 mt-4 text-sm text-primary hover:underline"
                   >
                     View Publication <ArrowUpRight className="w-3 h-3" />
