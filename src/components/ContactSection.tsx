@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
-import { Mail, Phone, Linkedin, MapPin, Send, ArrowUpRight, Loader2 } from 'lucide-react';
+import { Mail, Phone, MessageCircle, Linkedin, MapPin, Send, ArrowUpRight, Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -20,6 +20,12 @@ const contactInfo = [
     label: 'Phone',
     value: '+64 225471162',
     href: 'tel:+64225471162',
+  },
+  {
+    icon: MessageCircle,
+    label: 'WhatsApp',
+    value: '+64 225471162',
+    href: 'https://wa.me/64225471162',
   },
   {
     icon: Linkedin,
