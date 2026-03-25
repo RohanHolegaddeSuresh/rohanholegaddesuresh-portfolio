@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Award, FileText, Star, ArrowUpRight, Lock } from 'lucide-react';
+import { Award, FileText, Star, ArrowUpRight, Github, FolderOpen } from 'lucide-react';
 
 const achievements = [
   {
@@ -28,16 +28,27 @@ const achievements = [
   },
 ];
 
-const upcomingProjects = [
+const projects = [
   {
-    title: 'Master\'s Research Project',
-    description: 'Advanced research in AI/ML applications - Details coming soon',
-    status: 'In Progress',
+    title: 'AI for Collaborative Software Development — Dissertation',
+    tag: 'Masters Dissertation | COMP971 | 60 Credits | Grade: A-',
+    description: 'A Systematic Mapping Study investigating the impact of AI-driven tools (GitHub Copilot, Amazon Q Developer, ChatGPT) on collaborative software development practices. Drawing from 55 peer-reviewed publications, it examines how these tools influence team productivity, coordination, communication, and software quality in distributed environments.',
+    supervisor: 'Associate Professor Tony Clear, Auckland University of Technology',
+    github: 'https://github.com/RohanHolegaddeSuresh/my-dissertation-AI-Collaborative-Software-Development-Systematic-Mapping-Study',
   },
   {
-    title: 'Machine Learning Portfolio',
-    description: 'Comprehensive ML projects demonstrating deep learning expertise',
-    status: 'Coming Soon',
+    title: 'AgriLabour Connect — STEM Research',
+    tag: 'STEM Research | ENGE817 | 15 Credits | Grade: B+',
+    description: 'A systematic literature review exploring Karnataka\'s agricultural labour shortage caused by rural-urban migration and government welfare schemes. Proposes AgriLabour Connect — a technology-driven platform integrating labour matching, training, and fair wage distribution to bridge the gap between farmers and labourers.',
+    supervisor: 'Associate Professor Tony Clear, Auckland University of Technology',
+    github: 'https://github.com/RohanHolegaddeSuresh/rohan_masters_academicwork/tree/main/STEM',
+  },
+  {
+    title: 'AgriLabour Connect — Software Architecture',
+    tag: 'Software Architecture | COMP806 | 15 Credits | Grade: A-',
+    description: 'A continuation of the AgriLabour Connect project with two deliverables — (1) Architectural Design Documentation covering ADD methodology, 4+1 Architectural View Model, UML diagrams, and deployment models for a scalable government-integratable system; (2) Architecture Scenarios & Evaluation Report validating quality attributes (performance, security, usability, scalability, reliability) through structured scenario-based evaluation.',
+    supervisor: 'Dr. Julia Ma, Senior Lecturer, AUT',
+    github: 'https://github.com/RohanHolegaddeSuresh/rohan_masters_academicwork/tree/main/Software%20Architecture',
   },
 ];
 
@@ -112,32 +123,43 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        {/* Upcoming Projects */}
+        {/* Projects */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="max-w-3xl mx-auto"
         >
           <h3 className="text-2xl font-display font-semibold text-center mb-8 flex items-center justify-center gap-3">
-            <Lock className="w-5 h-5 text-primary" />
-            Upcoming Projects
+            <FolderOpen className="w-5 h-5 text-primary" />
+            Projects
           </h3>
           
-          <div className="grid md:grid-cols-2 gap-6">
-            {upcomingProjects.map((project, index) => (
+          <div className="grid md:grid-cols-3 gap-6">
+            {projects.map((project, index) => (
               <motion.div
                 key={project.title}
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.5, delay: 0.7 + index * 0.1 }}
-                className="bg-gradient-to-br from-card to-secondary/30 border border-border rounded-xl p-6 relative overflow-hidden"
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
+                className="bg-card border border-border rounded-xl p-6 card-hover group relative overflow-hidden"
               >
-                <div className="absolute top-4 right-4 px-2 py-1 text-xs font-medium bg-primary/20 text-primary rounded">
-                  {project.status}
+                <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full transform translate-x-16 -translate-y-16 group-hover:bg-primary/10 transition-colors" />
+                
+                <div className="relative">
+                  <p className="text-xs text-primary font-medium mb-2">{project.tag}</p>
+                  <h4 className="text-lg font-semibold mb-2">{project.title}</h4>
+                  <p className="text-sm text-muted-foreground mb-3">{project.supervisor}</p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">{project.description}</p>
+                  
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
+                  >
+                    <Github className="w-3 h-3" /> GitHub <ArrowUpRight className="w-3 h-3" />
+                  </a>
                 </div>
-                <h4 className="font-semibold mb-2 pr-24">{project.title}</h4>
-                <p className="text-sm text-muted-foreground">{project.description}</p>
               </motion.div>
             ))}
           </div>
