@@ -81,7 +81,14 @@ const RecommendationsSection = () => {
                   </AvatarFallback>
                 </Avatar>
                 <div>
-                  <p className="font-semibold text-sm">{rec.name}</p>
+                  <div className="flex items-center gap-2">
+                    <p className="font-semibold text-sm">{rec.name}</p>
+                    {rec.linkedin && (
+                      <a href={rec.linkedin} target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80 transition-colors">
+                        <Linkedin size={14} />
+                      </a>
+                    )}
+                  </div>
                   <p className="text-xs text-muted-foreground">
                     {rec.title}, {rec.company}
                   </p>
