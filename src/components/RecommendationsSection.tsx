@@ -10,6 +10,7 @@ const recommendations = [
     title: 'CEO & Founder',
     company: 'Skills Beyond Education',
     initials: 'PM',
+    linkedin: 'https://www.linkedin.com/in/preethammadhukar/',
     quote:
       'Rohan has shown the spirit of excellence and the way he carried himself at work. Punctual, prompt, and highly dedicated at his work. Rohan developed slowly and steadily by working every day in close quarters in the founder\'s office to become more confident and developing a winning mindset. He was a willing learner, eager to take up new work outside the scope and willing to experiment and develop his abilities in other areas of the business like marketing, sales, and HR — even though his primary role was that of tech support, which he carried out admirably. Rohan is an asset to any company or team he works for, and I wish him the best in his studies and future endeavours.',
   },
