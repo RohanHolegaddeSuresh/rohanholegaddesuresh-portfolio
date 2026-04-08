@@ -62,6 +62,7 @@ const hobbies = [
     tint: 'rgba(180, 131, 80, 0.06)',
     glowColor: 'rgba(180, 131, 80, 0.25)',
     borderColor: 'rgba(180, 131, 80, 0.3)',
+    image: '/images/hiking.jpeg',
   },
   {
     name: 'Singing',
