@@ -12,6 +12,7 @@ const hobbies = [
     tint: 'rgba(34, 197, 94, 0.06)',
     glowColor: 'rgba(34, 197, 94, 0.25)',
     borderColor: 'rgba(34, 197, 94, 0.3)',
+    image: '/images/football.jpeg',
   },
   {
     name: 'Cricket',
@@ -51,6 +52,7 @@ const hobbies = [
     tint: 'rgba(249, 115, 22, 0.06)',
     glowColor: 'rgba(249, 115, 22, 0.25)',
     borderColor: 'rgba(249, 115, 22, 0.3)',
+    image: '/images/running.jpeg',
   },
   {
     name: 'Hiking',
@@ -60,6 +62,7 @@ const hobbies = [
     tint: 'rgba(180, 131, 80, 0.06)',
     glowColor: 'rgba(180, 131, 80, 0.25)',
     borderColor: 'rgba(180, 131, 80, 0.3)',
+    image: '/images/hiking.jpeg',
   },
   {
     name: 'Singing',
@@ -126,17 +129,26 @@ const HobbyCard = ({ hobby, index, isInView }: HobbyCardProps) => {
             borderColor: isFlipped ? hobby.borderColor : undefined,
           }}
         >
-          {hobby.video ? (
+          {(hobby.video || hobby.image) ? (
             <>
-              <video
-                src={hobby.video}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full rounded-lg object-cover"
-                style={{ maxHeight: '140px' }}
-              />
+              {hobby.video ? (
+                <video
+                  src={hobby.video}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full rounded-lg object-cover"
+                  style={{ maxHeight: '140px' }}
+                />
+              ) : (
+                <img
+                  src={hobby.image}
+                  alt={hobby.name}
+                  className="w-full rounded-lg object-cover"
+                  style={{ maxHeight: '140px' }}
+                />
+              )}
               <p className="text-xs text-muted-foreground text-center leading-relaxed mt-1">
                 {hobby.detail}
               </p>
