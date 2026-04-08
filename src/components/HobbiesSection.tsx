@@ -52,6 +52,7 @@ const hobbies = [
     tint: 'rgba(249, 115, 22, 0.06)',
     glowColor: 'rgba(249, 115, 22, 0.25)',
     borderColor: 'rgba(249, 115, 22, 0.3)',
+    image: '/images/running.jpeg',
   },
   {
     name: 'Hiking',
