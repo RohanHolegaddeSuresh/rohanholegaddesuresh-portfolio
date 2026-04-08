@@ -142,12 +142,13 @@ const HobbyCard = ({ hobby, index, isInView }: HobbyCardProps) => {
                   style={{ maxHeight: '140px' }}
                 />
               ) : (
-                <img
-                  src={hobby.image}
-                  alt={hobby.name}
-                  className="w-full rounded-lg object-cover"
-                  style={{ maxHeight: '140px' }}
-                />
+                <div className="w-full rounded-lg overflow-hidden" style={{ height: '140px' }}>
+                  <img
+                    src={hobby.image}
+                    alt={hobby.name}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
               )}
               <p className="text-xs text-muted-foreground text-center leading-relaxed mt-1">
                 {hobby.detail}
