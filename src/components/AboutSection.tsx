@@ -9,12 +9,14 @@ const education = [
     institution: 'Auckland University of Technology',
     location: 'Auckland, New Zealand',
     period: 'Feb 2024 – Dec 2025',
+    logo: '/images/aut-logo.png',
   },
   {
     degree: 'Bachelor of Engineering in Information Science & Engineering',
     institution: 'BMS College of Engineering',
     location: 'Bangalore, India',
     period: '2017 – 2022',
+    logo: '/images/bms-logo.svg',
   },
 ];
 
