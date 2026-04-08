@@ -12,6 +12,7 @@ const hobbies = [
     tint: 'rgba(34, 197, 94, 0.06)',
     glowColor: 'rgba(34, 197, 94, 0.25)',
     borderColor: 'rgba(34, 197, 94, 0.3)',
+    image: '/images/football.jpeg',
   },
   {
     name: 'Cricket',
