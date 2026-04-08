@@ -129,17 +129,26 @@ const HobbyCard = ({ hobby, index, isInView }: HobbyCardProps) => {
             borderColor: isFlipped ? hobby.borderColor : undefined,
           }}
         >
-          {hobby.video ? (
+          {(hobby.video || hobby.image) ? (
             <>
-              <video
-                src={hobby.video}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full rounded-lg object-cover"
-                style={{ maxHeight: '140px' }}
-              />
+              {hobby.video ? (
+                <video
+                  src={hobby.video}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full rounded-lg object-cover"
+                  style={{ maxHeight: '140px' }}
+                />
+              ) : (
+                <img
+                  src={hobby.image}
+                  alt={hobby.name}
+                  className="w-full rounded-lg object-cover"
+                  style={{ maxHeight: '140px' }}
+                />
+              )}
               <p className="text-xs text-muted-foreground text-center leading-relaxed mt-1">
                 {hobby.detail}
               </p>
