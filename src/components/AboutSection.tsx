@@ -108,11 +108,18 @@ const AboutSection = () => {
                   className="relative pl-8"
                 >
                   <div className="timeline-dot absolute left-0 top-2" />
-                  <div className="bg-card border border-border rounded-xl p-6 card-hover">
-                    <p className="text-xs text-primary font-medium mb-2">{edu.period}</p>
-                    <h4 className="font-semibold text-lg mb-1">{edu.degree}</h4>
-                    <p className="text-muted-foreground">{edu.institution}</p>
-                    <p className="text-sm text-muted-foreground mt-1">{edu.location}</p>
+                  <div className="bg-card border border-border rounded-xl p-6 card-hover flex items-center gap-4">
+                    <div className="flex-1 min-w-0">
+                      <p className="text-xs text-primary font-medium mb-2">{edu.period}</p>
+                      <h4 className="font-semibold text-lg mb-1">{edu.degree}</h4>
+                      <p className="text-muted-foreground">{edu.institution}</p>
+                      <p className="text-sm text-muted-foreground mt-1">{edu.location}</p>
+                    </div>
+                    <img
+                      src={edu.logo}
+                      alt={edu.institution}
+                      className="w-14 h-14 rounded-lg object-contain flex-shrink-0"
+                    />
                   </div>
                 </motion.div>
               ))}
