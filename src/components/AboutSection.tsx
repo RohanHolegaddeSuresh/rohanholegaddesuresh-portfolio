@@ -10,6 +10,7 @@ const education = [
     location: 'Auckland, New Zealand',
     period: 'Feb 2024 – Dec 2025',
     logo: '/images/aut-logo.png',
+    link: 'https://www.aut.ac.nz/',
   },
   {
     degree: 'Bachelor of Engineering in Information Science & Engineering',
@@ -17,6 +18,7 @@ const education = [
     location: 'Bangalore, India',
     period: '2017 – 2022',
     logo: '/images/bms-logo.svg',
+    link: 'https://www.bmsce.ac.in/',
   },
 ];
 
