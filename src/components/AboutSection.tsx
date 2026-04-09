@@ -57,7 +57,7 @@ const AboutSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="space-y-6 text-muted-foreground"
             >
-              <p className="text-lg leading-relaxed">
+              <p className="leading-relaxed">
                 I'm a tech-focused professional with a strong foundation in software development, 
                 web technologies, machine learning, and data-driven systems. Originally from India, 
                 I've embarked on a journey to New Zealand to pursue higher education and expand my horizons.
