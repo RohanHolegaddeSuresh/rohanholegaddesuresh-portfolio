@@ -115,11 +115,13 @@ const AboutSection = () => {
                       <p className="text-muted-foreground">{edu.institution}</p>
                       <p className="text-sm text-muted-foreground mt-1">{edu.location}</p>
                     </div>
-                    <img
-                      src={edu.logo}
-                      alt={edu.institution}
-                      className="w-14 h-14 rounded-lg object-contain flex-shrink-0"
-                    />
+                    <a href={edu.link} target="_blank" rel="noopener noreferrer">
+                      <img
+                        src={edu.logo}
+                        alt={edu.institution}
+                        className="w-14 h-14 rounded-lg object-contain flex-shrink-0 hover:opacity-80 transition-opacity"
+                      />
+                    </a>
                   </div>
                 </motion.div>
               ))}
