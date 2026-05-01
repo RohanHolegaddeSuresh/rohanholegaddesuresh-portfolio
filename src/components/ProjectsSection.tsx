@@ -163,6 +163,19 @@ const ProjectsSection = () => {
               </motion.div>
             ))}
           </div>
+
+          <p className="text-center text-sm text-muted-foreground mt-8">
+            Additional projects and research papers are available on my GitHub repository.{' '}
+            <a
+              href="https://github.com/RohanHolegaddeSuresh"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-primary hover:underline inline-flex items-center gap-1"
+            >
+              <Github className="w-3 h-3" />
+              github.com/RohanHolegaddeSuresh
+            </a>
+          </p>
         </motion.div>
       </div>
     </section>
