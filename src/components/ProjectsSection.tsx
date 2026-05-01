@@ -22,7 +22,7 @@ const achievements = [
     title: 'Research Publication',
     organization: 'Academic Research',
     date: '2021',
-    description: 'Advanced Encryption Standard Based Access Control with Blockchain Security in Personal Health Records',
+    description: 'AES & Blockchain-Based Access Control for Personal Health Records\nPublished- IJCESR, Vol. 8, Issue 7, 2021\nDesigned and tested a cloud-based PHR security system using AES encryption, Blockchain, and Attribute-Based Encryption for patient-controlled data access. Implemented token-based access control and blockchain verification to protect sensitive health data from unauthorised access. Addressed real-world challenges in healthcare data privacy and cloud security compliance',
     icon: FileText,
     isPublication: true,
   },
@@ -106,7 +106,7 @@ const ProjectsSection = () => {
                 <p className="text-xs text-primary font-medium mb-2">{achievement.date}</p>
                 <h3 className="text-lg font-semibold mb-2">{achievement.title}</h3>
                 <p className="text-sm text-muted-foreground mb-3">{achievement.organization}</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">{achievement.description}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{achievement.description}</p>
                 
                 {achievement.isPublication && (
                   <a
