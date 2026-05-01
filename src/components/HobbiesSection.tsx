@@ -211,7 +211,7 @@ const HobbiesSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto"
         >
-          Sports teach discipline, teamwork, and quick decision-making—skills that complement my technical expertise.
+          Sports teach discipline, teamwork, and quick decision-making—skills that complement my technical expertise. (Hover on the cards below)
         </motion.p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
