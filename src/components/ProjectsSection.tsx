@@ -83,7 +83,7 @@ const ProjectsSection = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-muted-foreground text-center mb-16 max-w-2xl mx-auto"
         >
-          Highlighted achievements and ongoing research projects
+          Highlighted achievements and research projects
         </motion.p>
 
         {/* Achievements Grid */}
