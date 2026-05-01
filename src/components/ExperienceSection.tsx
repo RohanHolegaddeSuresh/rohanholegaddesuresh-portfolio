@@ -10,7 +10,7 @@ const techExperiences = [
     period: 'Mar 2023 – Feb 2024',
     duration: '1 yr',
     type: 'Full-time',
-    description: 'Website development and maintenance, backend testing, integrations (WhatsApp, chatbots, workflows), and operational support.',
+    description: 'Website development and maintenance for academic programs, and operational support. Conducted backend testing and debugging to ensure website stability. Designed and deployed chatbot systems, implemented WhatsApp automation and workflow integrations. Collaborated with cross-functional teams to improve system functionality.',
     highlights: ['Web Development', 'API Integration', 'Backend Testing', 'Chatbot Implementation'],
     icon: Code,
     website: 'https://skillsbeyondeducation.com',
