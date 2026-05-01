@@ -39,7 +39,7 @@ const projects = [
   {
     title: 'AgriLabour Connect — STEM Research',
     tag: 'STEM Research | ENGE817 | 15 Credits | Grade: B+',
-    description: 'A systematic literature review exploring Karnataka\'s agricultural labour shortage caused by rural-urban migration and government welfare schemes. Proposes AgriLabour Connect — a technology-driven platform integrating labour matching, training, and fair wage distribution to bridge the gap between farmers and labourers.',
+    description: "A systematic literature review exploring Karnataka's agricultural labour shortage caused by rural-urban migration and government welfare schemes. Proposes AgriLabour Connect, a technology-driven platform integrating labour matching, training, and fair wage distribution to bridge the gap between farmers and labourers.",
     supervisor: 'Associate Professor Tony Clear, Auckland University of Technology',
     github: 'https://github.com/RohanHolegaddeSuresh/rohan_masters_academicwork/tree/main/STEM',
   },
