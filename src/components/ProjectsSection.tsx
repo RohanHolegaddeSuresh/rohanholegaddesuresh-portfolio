@@ -106,7 +106,7 @@ const ProjectsSection = () => {
                 <p className="text-xs text-primary font-medium mb-2">{achievement.date}</p>
                 <h3 className="text-lg font-semibold mb-2">{achievement.title}</h3>
                 <p className="text-sm text-muted-foreground mb-3">{achievement.organization}</p>
-                <p className="text-sm text-muted-foreground leading-relaxed">{achievement.description}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed whitespace-pre-line">{achievement.description}</p>
                 
                 {achievement.isPublication && (
                   <a
