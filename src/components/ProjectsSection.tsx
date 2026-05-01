@@ -32,7 +32,7 @@ const projects = [
   {
     title: 'AI for Collaborative Software Development — Dissertation',
     tag: 'Masters Dissertation | COMP971 | 60 Credits | Grade: A-',
-    description: 'A Systematic Mapping Study investigating the impact of AI-driven tools (GitHub Copilot, Amazon Q Developer, ChatGPT) on collaborative software development practices. Drawing from 55 peer-reviewed publications, it examines how these tools influence team productivity, coordination, communication, and software quality in distributed environments.',
+    description: 'A Systematic Mapping Study investigating the impact of AI-driven tools (GitHub Copilot, Amazon Q Developer, ChatGPT) on collaborative software development practices. Drawing from 55 peer-reviewed publications, it examines how these tools influence team productivity, coordination, communication, and software quality in distributed environments. Produced actionable recommendations for DevSecOps integration, AI governance frameworks, and responsible AI adoption in enterprise settings',
     supervisor: 'Associate Professor Tony Clear, Auckland University of Technology',
     github: 'https://github.com/RohanHolegaddeSuresh/my-dissertation-AI-Collaborative-Software-Development-Systematic-Mapping-Study',
   },
