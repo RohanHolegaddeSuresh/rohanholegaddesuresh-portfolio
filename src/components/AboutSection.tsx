@@ -69,7 +69,7 @@ const AboutSection = () => {
                 through sports and professional experiences.
               </p>
               <p className="leading-relaxed">
-                Beyond tech, I'm passionate about sports—football refereeing, badminton, cricket, 
+                Beyond tech, I'm passionate about sports, football refereeing, badminton, cricket, 
                 and swimming keep me active and teach me invaluable lessons about teamwork and quick decision-making.
               </p>
             </motion.div>
