@@ -184,7 +184,7 @@ const HobbiesSection = () => {
   const isInView = useInView(ref, { once: true, margin: '-100px' });
 
   return (
-    <section className="py-24 lg:py-32 bg-card/30" ref={ref}>
+    <section id="hobbies" className="py-24 lg:py-32 bg-card/30" ref={ref}>
       <div className="container mx-auto px-6">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
