@@ -1,0 +1,22 @@
+# Rohan Holegadde Suresh — Portfolio
+
+> Personal portfolio of Rohan Holegadde Suresh, a Software Engineer based in Auckland, New Zealand, specialising in AI/ML, web development and data-driven systems.
+
+## Pages
+
+- [Home](/): Overview of Rohan's background, skills, experience, recommendations, projects, certifications and contact details.
+
+## Sections
+
+- [About](/#about): Background, education timeline and personal story.
+- [Skills](/#skills): Technical skills across AI/ML, web development and data.
+- [Experience](/#experience): Professional journey and current roles in Auckland.
+- [Recommendations](/#recommendations): Testimonials from colleagues and mentors.
+- [Projects](/#projects): Academic and personal projects with research metadata.
+- [Certifications](/#certifications): Verified certifications across AI, data, cloud, software and security.
+- [Life.exe](/#hobbies): Hobbies and interests outside of engineering.
+- [Contact](/#contact): Ways to get in touch.
+
+## Optional
+
+- [GitHub](https://github.com/RohanHolegaddeSuresh): Additional projects and research papers.

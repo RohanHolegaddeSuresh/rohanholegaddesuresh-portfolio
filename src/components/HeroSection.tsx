@@ -32,6 +32,9 @@ const HeroSection = () => {
               className="text-5xl md:text-6xl xl:text-8xl font-display font-bold leading-[0.9] mb-6 lg:text-5xl"
             >
               Rohan Holegadde Suresh
+              <span className="block text-2xl md:text-3xl xl:text-4xl lg:text-2xl font-display font-medium text-muted-foreground mt-3">
+                Software Engineer · AI/ML &amp; Web
+              </span>
             </motion.h1>
 
             <motion.p
