@@ -141,6 +141,7 @@ const TimelineCard = ({ exp, index, isLeft }: { exp: typeof techExperiences[0]; 
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"
               title={`Visit ${exp.company}`}
+              aria-label={`Visit ${exp.company} website`}
             >
               <ExternalLink className="w-3.5 h-3.5" />
             </a>
