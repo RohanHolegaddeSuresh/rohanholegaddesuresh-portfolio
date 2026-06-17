@@ -21,6 +21,8 @@ const categories: Category[] = [
     certs: [
       { name: 'Claude 101', org: 'Anthropic Education', url: 'https://verify.skilljar.com/c/a8a9q9gbi5oy' },
       { name: 'AI Fluency: Framework and Foundations', org: 'Anthropic Education', url: 'https://verify.skilljar.com/c/2jhop2z9yiaz' },
+      { name: 'Claude Code 101', org: 'Anthropic Education', url: 'https://verify.skilljar.com/c/ykati6ohj23o' },
+      { name: 'Claude Code in Action', org: 'Anthropic Education', url: 'https://verify.skilljar.com/c/qbge3bqa7m5q' },
       { name: 'Introduction to Artificial Intelligence', org: 'IBM (Coursera)', url: 'https://www.coursera.org/account/accomplishments/verify/PBHEMCAZBSZJ' },
       { name: 'Automated Machine Learning: Google & Apple', org: 'AIBrain, Udemy', url: 'https://www.udemy.com/certificate/UC-01d7e3ba-4058-42eb-a3f3-91ef11acfb58/' },
       { name: 'Building a Future with Robots', org: 'University of Sheffield', url: 'https://www.futurelearn.com/certificates/4za1u9e' },
