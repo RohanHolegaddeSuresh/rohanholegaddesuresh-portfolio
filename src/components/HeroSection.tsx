@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowDown, Linkedin, Mail, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import profilePhoto from '@/assets/profile-photo.jpg';
+import resumeAsset from '@/assets/Rohan_resume_june26.pdf.asset.json';
 
 const HeroSection = () => {
   return (
