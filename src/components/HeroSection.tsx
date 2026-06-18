@@ -65,6 +65,12 @@ const HeroSection = () => {
                   Contact Me
                 </a>
               </Button>
+              <Button variant="outline" size="lg">
+                <a href={resumeAsset.url} download className="flex items-center gap-2">
+                  <Download className="w-4 h-4" />
+                  Download Resume
+                </a>
+              </Button>
             </motion.div>
 
             <motion.div
