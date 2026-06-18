@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { ArrowDown, Linkedin, Mail, Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import profilePhoto from '@/assets/profile-photo.jpg';
+import resumeAsset from '@/assets/Rohan_resume_june26.pdf.asset.json';
 
 const HeroSection = () => {
   return (
@@ -62,6 +63,12 @@ const HeroSection = () => {
                 <a href="#contact" className="flex items-center gap-2">
                   <Mail className="w-4 h-4" />
                   Contact Me
+                </a>
+              </Button>
+              <Button variant="outline" size="lg">
+                <a href={resumeAsset.url} download className="flex items-center gap-2">
+                  <Download className="w-4 h-4" />
+                  Download Resume
                 </a>
               </Button>
             </motion.div>
