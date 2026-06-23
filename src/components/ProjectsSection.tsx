@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Award, FileText, Star, ArrowUpRight, Github, FolderOpen } from 'lucide-react';
+import { Award, FileText, Star, ArrowUpRight, Github, FolderOpen, Globe } from 'lucide-react';
 
 const achievements = [
   {
@@ -49,6 +49,21 @@ const projects = [
     description: 'A continuation of the AgriLabour Connect project with two deliverables — (1) Architectural Design Documentation covering ADD methodology, 4+1 Architectural View Model, UML diagrams, and deployment models for a scalable government-integratable system; (2) Architecture Scenarios & Evaluation Report validating quality attributes (performance, security, usability, scalability, reliability) through structured scenario-based evaluation.',
     supervisor: 'Dr. Julia Ma, Senior Lecturer, AUT',
     github: 'https://github.com/RohanHolegaddeSuresh/rohan_masters_academicwork/tree/main/Software%20Architecture',
+  },
+  {
+    title: 'NZ Job Application Tracker',
+    tag: 'Personal Tool · React.js · Tailwind CSS · Netlify',
+    description:
+      'A full-stack job tracking web app built specifically for the New Zealand job market — addressing a real gap no existing tool covers. Designed as an immigrant job seeker on a Post-Study Work Visa, the app includes NZ-specific features such as AEWV accredited employer verification, NZ job source tracking (Trade Me, Seek, LinkedIn etc.), an NZ application checklist, and NZ offer review prompts to guide candidates through local hiring norms. Features live application status analytics, a visual application funnel, and CSV data export.',
+    features: [
+      'AEWV accredited employer checker',
+      'NZ-specific application checklist & offer review prompts',
+      'Live analytics dashboard & application funnel visualisation',
+      'CSV export for all application data',
+      'Built for immigrant job seekers in New Zealand',
+    ],
+    github: 'https://github.com/RohanHolegaddeSuresh/rohan-job-applications-tracker',
+    liveSite: 'https://rohan-jobtracker.netlify.app/',
   },
 ];
 
@@ -148,17 +163,39 @@ const ProjectsSection = () => {
                 <div className="relative">
                   <p className="text-xs text-primary font-medium mb-2">{project.tag}</p>
                   <h4 className="text-lg font-semibold mb-2">{project.title}</h4>
-                  <p className="text-sm text-muted-foreground mb-3">{project.supervisor}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">{project.description}</p>
-                  
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
-                  >
-                    <Github className="w-3 h-3" /> GitHub <ArrowUpRight className="w-3 h-3" />
-                  </a>
+                  {project.supervisor && (
+                    <p className="text-sm text-muted-foreground mb-3">{project.supervisor}</p>
+                  )}
+                  <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
+
+                  {project.features && (
+                    <ul className="text-sm text-muted-foreground space-y-1 mt-3 mb-4 list-disc list-inside">
+                      {project.features.map((feature) => (
+                        <li key={feature}>{feature}</li>
+                      ))}
+                    </ul>
+                  )}
+
+                  <div className="flex flex-wrap items-center gap-3 mt-2">
+                    {project.liveSite && (
+                      <a
+                        href={project.liveSite}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
+                      >
+                        <Globe className="w-3 h-3" /> Live Site <ArrowUpRight className="w-3 h-3" />
+                      </a>
+                    )}
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
+                    >
+                      <Github className="w-3 h-3" /> GitHub <ArrowUpRight className="w-3 h-3" />
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             ))}
