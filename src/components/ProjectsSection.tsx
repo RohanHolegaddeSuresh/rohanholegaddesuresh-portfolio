@@ -54,7 +54,7 @@ const projects = [
     title: 'NZ Job Application Tracker',
     tag: 'Personal Tool · React.js · Tailwind CSS · Netlify',
     description:
-      'A full-stack job tracking web app built specifically for the New Zealand job market — addressing a real gap no existing tool covers. Designed as an immigrant job seeker on a Post-Study Work Visa, the app includes NZ-specific features such as AEWV accredited employer verification, NZ job source tracking (Trade Me, Seek, LinkedIn etc.), an NZ application checklist, and NZ offer review prompts to guide candidates through local hiring norms. Features live application status analytics, a visual application funnel, and CSV data export.',
+      'A full-stack job tracking web app built specifically for the New Zealand job market addressing a real gap no existing tool covers. Designed as an immigrant job seeker on a Post-Study Work Visa, the app includes NZ-specific features such as AEWV accredited employer verification, NZ job source tracking (Trade Me, Seek, LinkedIn etc.), an NZ application checklist, and NZ offer review prompts to guide candidates through local hiring norms. Features live application status analytics, a visual application funnel, and CSV data export.',
     features: [
       'AEWV accredited employer checker',
       'NZ-specific application checklist & offer review prompts',
