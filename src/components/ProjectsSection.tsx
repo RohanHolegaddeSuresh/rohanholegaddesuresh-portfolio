@@ -163,17 +163,39 @@ const ProjectsSection = () => {
                 <div className="relative">
                   <p className="text-xs text-primary font-medium mb-2">{project.tag}</p>
                   <h4 className="text-lg font-semibold mb-2">{project.title}</h4>
-                  <p className="text-sm text-muted-foreground mb-3">{project.supervisor}</p>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4">{project.description}</p>
-                  
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
-                  >
-                    <Github className="w-3 h-3" /> GitHub <ArrowUpRight className="w-3 h-3" />
-                  </a>
+                  {project.supervisor && (
+                    <p className="text-sm text-muted-foreground mb-3">{project.supervisor}</p>
+                  )}
+                  <p className="text-sm text-muted-foreground leading-relaxed">{project.description}</p>
+
+                  {project.features && (
+                    <ul className="text-sm text-muted-foreground space-y-1 mt-3 mb-4 list-disc list-inside">
+                      {project.features.map((feature) => (
+                        <li key={feature}>{feature}</li>
+                      ))}
+                    </ul>
+                  )}
+
+                  <div className="flex flex-wrap items-center gap-3 mt-2">
+                    {project.liveSite && (
+                      <a
+                        href={project.liveSite}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
+                      >
+                        <Globe className="w-3 h-3" /> Live Site <ArrowUpRight className="w-3 h-3" />
+                      </a>
+                    )}
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
+                    >
+                      <Github className="w-3 h-3" /> GitHub <ArrowUpRight className="w-3 h-3" />
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             ))}
