@@ -201,6 +201,42 @@ const ProjectsSection = () => {
             ))}
           </div>
 
+          {/* Fun Builds */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, delay: 1.1 }}
+            className="mt-12"
+          >
+            <p className="text-xs uppercase tracking-[0.3em] text-muted-foreground font-medium text-center mb-4">
+              Fun Builds
+            </p>
+            <div className="md:max-w-sm mx-auto">
+              <div className="bg-secondary/40 border border-border/60 rounded-xl p-5 card-hover group relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full transform translate-x-10 -translate-y-10 group-hover:bg-primary/10 transition-colors" />
+                <div className="relative flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0 group-hover:bg-primary/20 transition-colors">
+                    <Sparkles className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h4 className="text-base font-semibold mb-1">Sandi&apos;s Compliment Machine</h4>
+                    <p className="text-sm text-muted-foreground leading-relaxed mb-3">
+                      A personalised daily compliment generator built as a gift for my friend. Because everyone deserves a dedicated hype machine.
+                    </p>
+                    <a
+                      href="https://sandis-complimentmachine.lovable.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
+                    >
+                      <Globe className="w-3 h-3" /> Live Site <ArrowUpRight className="w-3 h-3" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
           <p className="text-center text-sm text-muted-foreground mt-8">
             Additional projects and research papers are available on my GitHub repository.{' '}
             <a
