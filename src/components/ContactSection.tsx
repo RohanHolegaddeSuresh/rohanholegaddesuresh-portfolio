@@ -160,8 +160,8 @@ const ContactSection = () => {
               className="mt-12 p-6 bg-gradient-to-br from-primary/10 to-accent/5 rounded-xl border border-primary/20"
             >
               <p className="text-sm text-muted-foreground leading-relaxed">
-                I'm currently open to new opportunities in software development, AI/ML, 
-                and related fields. If you think I'd be a good fit for your team, 
+                I'm currently open to new opportunities in data, AI/ML, 
+                software development, related fields. If you think I'd be a good fit for your team, 
                 don't hesitate to reach out!
               </p>
             </motion.div>
