@@ -248,7 +248,7 @@ const ExperienceSection = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-muted-foreground mb-10 max-w-xl"
           >
-            While settling into Auckland, I've been taking on part-time work alongside my job search.
+            While studying and settling into Auckland, I've been taking on part-time work alongside my job search.
           </motion.p>
 
           <div className="grid md:grid-cols-2 gap-6">
