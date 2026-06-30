@@ -116,6 +116,65 @@ const exploring = [
   { name: 'Hugging Face', percent: 55, icon: Box },
 ];
 
+const quotes = [
+  { text: `Any sufficiently advanced technology is indistinguishable from magic.`, author: `Arthur C. Clarke` },
+  { text: `The saddest aspect of life right now is that science gathers knowledge faster than society gathers wisdom.`, author: `Isaac Asimov` },
+  { text: `It has become appallingly obvious that our technology has exceeded our humanity.`, author: `Albert Einstein` },
+  { text: `The real problem is not whether machines think but whether men do.`, author: `B. F. Skinner` },
+  { text: `The future is still so much bigger than the past.`, author: `Tim Berners-Lee` },
+  { text: `Science and technology are what we can do; morality is what we agree we should do.`, author: `Anonymous scientific maxim` },
+  { text: `The machine does not isolate man from the great problems of nature but plunges him more deeply into them.`, author: `Antoine de Saint-Exupéry` },
+  { text: `Technology is a useful servant but a dangerous master.`, author: `Christian Lous Lange` },
+  { text: `We are still in the first minutes of the first day of the Internet revolution.`, author: `Scott Cook` },
+  { text: `The internet is becoming the town square for the global village of tomorrow.`, author: `Bill Gates` },
+  { text: `Innovation is the specific instrument of entrepreneurship.`, author: `Peter Drucker` },
+  { text: `What is now proved was once only imagined.`, author: `William Blake` },
+  { text: `The most powerful weapon on earth is the human soul on fire.`, author: `Ferdinand Foch` },
+  { text: `Science is a way of thinking much more than it is a body of knowledge.`, author: `Carl Sagan` },
+  { text: `The advance of technology is based on making it fit in so that you don't really even notice it.`, author: `Bill Gates` },
+  { text: `Computers are incredibly fast, accurate, and stupid; humans are incredibly slow, inaccurate, and brilliant.`, author: `Albert Einstein` },
+  { text: `We can't solve problems by using the same kind of thinking we used when we created them.`, author: `Albert Einstein` },
+  { text: `The Web is more a social creation than a technical one.`, author: `Tim Berners-Lee` },
+  { text: `The future belongs to those who prepare for it today.`, author: `Malcolm X` },
+  { text: `Science can amuse and fascinate us all, but it is engineering that changes the world.`, author: `Isaac Asimov` },
+  { text: `The first rule of any technology used in a business is that automation applied to an efficient operation will magnify the efficiency.`, author: `Bill Gates` },
+  { text: `The real danger is not that computers will begin to think like men, but that men will begin to think like computers.`, author: `Sydney J. Harris` },
+  { text: `The future is not something we enter; the future is something we create.`, author: `Leonard I. Sweet` },
+  { text: `Knowledge is power.`, author: `Francis Bacon` },
+];
+
+const QuotesRotator = () => {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setIndex((prev) => (prev + 1) % quotes.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
+  return (
+    <div className="relative">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 8 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -8 }}
+          transition={{ duration: 0.4, ease: 'easeInOut' }}
+        >
+          <p className="text-xs italic text-foreground/90 leading-snug">
+            &ldquo;{quotes[index].text}&rdquo;
+          </p>
+          <p className="text-[10px] uppercase tracking-wider text-primary mt-2">
+            &mdash; {quotes[index].author}
+          </p>
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  );
+};
+
 // Proficiency dots
 const Dots = ({ filled, total = 5 }: { filled: number; total?: number }) => (
   <div className="flex gap-1">
