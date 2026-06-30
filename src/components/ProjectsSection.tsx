@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Award, FileText, Star, ArrowUpRight, Github, FolderOpen, Globe, Sparkles } from 'lucide-react';
+import { Award, FileText, Star, ArrowUpRight, Github, FolderOpen, Globe, Sparkles, Bot } from 'lucide-react';
 
 const achievements = [
   {
