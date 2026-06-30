@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Award, FileText, Star, ArrowUpRight, Github, FolderOpen, Globe, Sparkles } from 'lucide-react';
+import { Award, FileText, Star, ArrowUpRight, Github, FolderOpen, Globe, Sparkles, Bot } from 'lucide-react';
 
 const achievements = [
   {
@@ -64,6 +64,19 @@ const projects = [
     ],
     github: 'https://github.com/RohanHolegaddeSuresh/rohan-job-applications-tracker',
     liveSite: 'https://rohan-jobtracker.netlify.app/',
+  },
+  {
+    title: 'AI Virtual Agent — Portfolio Chatbot',
+    tag: 'Personal Project · Chatbase · Prompt Engineering · Knowledge Base Training',
+    description:
+      'A custom-trained AI chatbot integrated into this portfolio, powered by Chatbase, acting as a virtual assistant for recruiters and visitors. Trained on a comprehensive knowledge base covering my professional background, skills, projects, and personality through carefully crafted prompt engineering. Designed to make the portfolio interactive rather than static, allowing visitors to ask questions naturally instead of scrolling through every section.',
+    features: [
+      'Built and trained using Chatbase, with a custom knowledge base covering professional and personal context',
+      'Applied prompt engineering techniques to shape tone, accuracy, and conversation flow',
+      'Handles recruiter queries, portfolio navigation, and personality-driven interactions',
+      'Embedded directly into the live site as an accessible chat widget',
+    ],
+    note: 'Try it now — look for the chat icon in the bottom right corner!',
   },
 ];
 
@@ -187,15 +200,22 @@ const ProjectsSection = () => {
                         <Globe className="w-3 h-3" /> Live Site <ArrowUpRight className="w-3 h-3" />
                       </a>
                     )}
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
-                    >
-                      <Github className="w-3 h-3" /> GitHub <ArrowUpRight className="w-3 h-3" />
-                    </a>
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
+                      >
+                        <Github className="w-3 h-3" /> GitHub <ArrowUpRight className="w-3 h-3" />
+                      </a>
+                    )}
                   </div>
+                  {project.note && (
+                    <p className="text-xs text-primary mt-2 font-medium flex items-center gap-1.5">
+                      <Bot className="w-3 h-3" /> {project.note}
+                    </p>
+                  )}
                 </div>
               </motion.div>
             ))}
