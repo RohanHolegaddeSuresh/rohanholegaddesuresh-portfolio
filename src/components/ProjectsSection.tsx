@@ -65,6 +65,19 @@ const projects = [
     github: 'https://github.com/RohanHolegaddeSuresh/rohan-job-applications-tracker',
     liveSite: 'https://rohan-jobtracker.netlify.app/',
   },
+  {
+    title: 'AI Virtual Agent — Portfolio Chatbot',
+    tag: 'Personal Project · Chatbase · Prompt Engineering · Knowledge Base Training',
+    description:
+      'A custom-trained AI chatbot integrated into this portfolio, powered by Chatbase, acting as a virtual assistant for recruiters and visitors. Trained on a comprehensive knowledge base covering my professional background, skills, projects, and personality through carefully crafted prompt engineering. Designed to make the portfolio interactive rather than static, allowing visitors to ask questions naturally instead of scrolling through every section.',
+    features: [
+      'Built and trained using Chatbase, with a custom knowledge base covering professional and personal context',
+      'Applied prompt engineering techniques to shape tone, accuracy, and conversation flow',
+      'Handles recruiter queries, portfolio navigation, and personality-driven interactions',
+      'Embedded directly into the live site as an accessible chat widget',
+    ],
+    note: 'Try it now — look for the chat icon in the bottom right corner!',
+  },
 ];
 
 const ProjectsSection = () => {
