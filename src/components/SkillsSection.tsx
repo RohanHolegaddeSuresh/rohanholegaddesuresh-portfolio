@@ -402,10 +402,7 @@ const SkillsSection = () => {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="col-span-2 lg:col-span-1 bg-gradient-to-br from-primary/10 to-transparent border border-primary/20 rounded-xl p-4"
           >
-            <p className="text-xs italic text-foreground/90 leading-snug">
-              "The best way to predict the future is to invent it."
-            </p>
-            <p className="text-[10px] uppercase tracking-wider text-primary mt-2">— Alan Kay</p>
+            <QuotesRotator />
           </motion.div>
         </div>
 
