@@ -200,15 +200,22 @@ const ProjectsSection = () => {
                         <Globe className="w-3 h-3" /> Live Site <ArrowUpRight className="w-3 h-3" />
                       </a>
                     )}
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
-                    >
-                      <Github className="w-3 h-3" /> GitHub <ArrowUpRight className="w-3 h-3" />
-                    </a>
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
+                      >
+                        <Github className="w-3 h-3" /> GitHub <ArrowUpRight className="w-3 h-3" />
+                      </a>
+                    )}
                   </div>
+                  {project.note && (
+                    <p className="text-xs text-primary mt-2 font-medium flex items-center gap-1.5">
+                      <Bot className="w-3 h-3" /> {project.note}
+                    </p>
+                  )}
                 </div>
               </motion.div>
             ))}
