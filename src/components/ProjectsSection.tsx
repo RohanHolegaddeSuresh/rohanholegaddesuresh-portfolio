@@ -51,6 +51,12 @@ const projects = [
     github: 'https://github.com/RohanHolegaddeSuresh/rohan_masters_academicwork/tree/main/Software%20Architecture',
   },
   {
+    title: 'CompStat AI Prototype',
+    tag: 'Human-AI Interaction | UX/UI | AI Systems',
+    description: 'Designed a high-fidelity AI-assisted policing prototype that improves crime analysis, report generation, predictive decision support, officer training, and decision support while maintaining human oversight and ethical AI principles.',
+    github: 'https://github.com/RohanHolegaddeSuresh/rohan_masters_academicwork/tree/main/HCI',
+  },
+  {
     title: 'NZ Job Application Tracker',
     tag: 'Personal Tool · React.js · Tailwind CSS · Netlify',
     description:
