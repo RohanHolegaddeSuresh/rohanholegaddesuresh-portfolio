@@ -602,7 +602,7 @@ const SkillsSection = () => {
           </div>
           <InterconnectionDiagram />
           <p className="text-xs text-muted-foreground mt-6 max-w-3xl mx-auto text-center leading-relaxed">
-            The Skills Interconnection diagram is a visual map showing how my core skills connect and build on each other in real-world work — not just a list of things I know in isolation. Python is my foundation, feeding directly into Machine Learning, which relies on Pandas for data manipulation. From there, SQL helps me query and manage the underlying data, Data Visualization turns those findings into something meaningful, and React lets me build interfaces to present it. APIs then tie everything together for integration.
+            The Skills Interconnection diagram is a visual map showing how my core skills connect and build on each other in real-world work, not just a list of things I know in isolation. Python is my foundation, feeding directly into Machine Learning, which relies on Pandas for data manipulation. From there, SQL helps me query and manage the underlying data, Data Visualization turns those findings into something meaningful, and React lets me build interfaces to present it. APIs then tie everything together for integration.
           </p>
         </motion.div>
       </div>
