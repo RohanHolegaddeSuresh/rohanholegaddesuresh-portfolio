@@ -300,17 +300,6 @@ const InterconnectionDiagram = () => {
           </motion.g>
         ))}
       </svg>
-      <div className="flex flex-wrap justify-center gap-6 mt-4 text-xs text-muted-foreground">
-        <div className="flex items-center gap-2">
-          <span className="inline-block w-6 h-px bg-primary" /> Stronger Connection
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="inline-block w-6 border-t border-dashed border-primary" /> Medium Connection
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="inline-block w-6 border-t border-dotted border-primary/60" /> Supports
-        </div>
-      </div>
     </div>
   );
 };
@@ -612,6 +601,9 @@ const SkillsSection = () => {
             </p>
           </div>
           <InterconnectionDiagram />
+          <p className="text-xs text-muted-foreground mt-6 max-w-3xl mx-auto text-center leading-relaxed">
+            The Skills Interconnection diagram is a visual map showing how my core skills connect and build on each other in real-world work — not just a list of things I know in isolation. Python is my foundation, feeding directly into Machine Learning, which relies on Pandas for data manipulation. From there, SQL helps me query and manage the underlying data, Data Visualization turns those findings into something meaningful, and React lets me build interfaces to present it. APIs then tie everything together for integration.
+          </p>
         </motion.div>
       </div>
     </section>
