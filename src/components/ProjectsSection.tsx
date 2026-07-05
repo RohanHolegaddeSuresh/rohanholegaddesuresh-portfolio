@@ -81,7 +81,7 @@ const projects = [
       'Applied prompt engineering techniques to shape tone, accuracy, and conversation flow',
       'Handles recruiter queries, portfolio navigation, and personality-driven interactions',
       'Embedded directly into the live site as an accessible chat widget',
-      'Integrated MCP (Model Context Protocol) server with read-only tools (get_profile, list_projects) — making the portfolio machine-readable and directly accessible by AI assistants like Claude, ChatGPT, and Cursor',
+      'Integrated MCP (Model Context Protocol) server with read-only tools (get_profile, list_projects), making the portfolio machine-readable and directly accessible by AI assistants like Claude, ChatGPT, and Cursor into this portfolio site',
     ],
     note: 'Try it now — look for the chat icon in the bottom right corner!',
   },
