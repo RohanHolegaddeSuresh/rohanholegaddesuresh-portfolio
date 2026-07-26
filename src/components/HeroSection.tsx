@@ -53,24 +53,32 @@ const HeroSection = () => {
               transition={{ duration: 0.6, delay: 0.7 }}
               className="flex flex-wrap gap-4 mb-12"
             >
-              <Button size="lg" className="group">
+              <Button size="lg" className="group" asChild>
                 <a href="#projects" className="flex items-center gap-2">
                   View Portfolio
                   <ArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" asChild>
                 <a href="#contact" className="flex items-center gap-2">
                   <Mail className="w-4 h-4" />
                   Contact Me
                 </a>
               </Button>
-              <Button variant="outline" size="lg">
-                <a href={resumeAsset.url} download className="flex items-center gap-2">
+              <Button variant="outline" size="lg" asChild>
+                <a
+                  href={resumeAsset.url}
+                  download="Rohan_Holegadde_Suresh_Resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2"
+                  aria-label="Download Rohan's resume (PDF)"
+                >
                   <Download className="w-4 h-4" />
                   Download Resume
                 </a>
               </Button>
+
             </motion.div>
 
             <motion.div
